@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lista Cognomi</title>
+
+    <!-- Link CSS Style -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- Main -->
+    <main>
+      <div class="container">
+        <div class="container-flex">
+          <input
+            type="text"
+            id="userSurnameInput"
+            name="userSurnameInput"
+            placeholder="Inserisca il suo cognome:"
+          />
+          <label for="userSurnameInput"></label>
+
+          <input
+            type="button"
+            id="userSurnamePush"
+            onclick="userSurnamePush()"
+            value="Invio"
+          />
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="container-flex">
+          <input
+            type="button"
+            id="listSurnamePull"
+            onclick="listSurnamePull()"
+            value="Mostra lista"
+          />
+        </div>
+      </div>
+    </main>
+    <!-- End Main -->
+
+    <!-- Link Javascript -->
+    <script type="text/javascript" src="js/script.js"></script>
+  </body>
+</html>
