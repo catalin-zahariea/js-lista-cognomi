@@ -44,15 +44,15 @@ function listSurnamePull() {
     // Variables
     var userSurnamePosition = -1;
 
-    var i = 0;
-    while ( userSurnamePosition == -1 && i < listSurname.length) {
+    var x = 0;
+    while ( userSurnamePosition == -1 && x < listSurname.length) {
 
      console.log(userSurnameInput);
      if (userSurnameInput == listSurname[i]) {
-         userSurnamePosition = i + 1;
+         userSurnamePosition = x + 1;
          document.getElementById("userSurnameActivePush").innerHTML = "La sua posizione nella lista è la numero: " + userSurnamePosition;
          }
 
-     i++;
+     x++;
      }
 }
