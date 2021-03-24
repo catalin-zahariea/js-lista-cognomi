@@ -48,7 +48,7 @@ function listSurnamePull() {
     while ( userSurnamePosition == -1 && x < listSurname.length) {
 
      console.log(userSurnameInput);
-     if (userSurnameInput == listSurname[i]) {
+     if (userSurnameInput == listSurname[x]) {
          userSurnamePosition = x + 1;
          document.getElementById("userSurnameActivePush").innerHTML = "La sua posizione nella lista è la numero: " + userSurnamePosition;
          }
