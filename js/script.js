@@ -1,31 +1,42 @@
 // ---------------------------------------------------------------------------
 // Variables
 var listSurname = ["Bianchi", "Neri", "Rossi", "Verdi", "Gialli"];
-// La variabile userSurnameInput è globale perché verrà poi utilizzata in un'altra funzione.
-var userSurnameInput;
+var userSurnamePush = document.getElementById('userSurnamePush');
+var listSurnamePull = document.getElementById('listSurnamePull');
 
-function userSurnamePush() {
+// ____________________________
+// Button click activates function to push Surname inside listSurname array.
+//
+userSurnamePush.addEventListener('click', function() {
 
-    // ---------------------------------------------------------------------------
-    // Input value into array
-    userSurnameInput = document.getElementById("userSurnameInput").value;
+    // ____________________________
+    // Variables
+    var userSurnameInput = document.getElementById("userSurnameInput").value;
+
+    
     listSurname.push(userSurnameInput);
     
-    // ---------------------------------------------------------------------------
+    // ____________________________
     // Sort array in alphabetical order and NON case sensitive
     listSurname.sort((a, b) => a.localeCompare(b, undefined, {sensitivity: 'base'}));
-}
 
-function listSurnamePull() {
+});
 
-    // ---------------------------------------------------------------------------
+
+// ____________________________
+// Button click activates function to print list and showcase user input position
+// inside the array.
+//
+listSurnamePull.addEventListener('click', function () {
+
+    // ____________________________
     // Print the list of surnames in alphabetical order inside and ordered list for the user.
     
     for (var i = 0; i < listSurname.length; i++) {
         document.getElementById("listSurnamePullList").innerHTML += "<li>" + listSurname[i] + "</li>";
     }
 
-    // ---------------------------------------------------------------------------
+    // ____________________________
     // Position check with FOR loop
 
     // Variables
@@ -38,7 +49,7 @@ function listSurnamePull() {
     //     }
     //   }
 
-    // ---------------------------------------------------------------------------
+    // ____________________________
     // Position check with WHILE loop
     
     // Variables
@@ -55,4 +66,6 @@ function listSurnamePull() {
 
      x++;
      }
-}
+
+});
+
